@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+		<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Exploration Header - Slider Revolution</title>
+			<meta name="description" content="Slider Revolution Example" />
+			<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+			<meta name="author" content="ThemePunch" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<!-- LOAD JQUERY LIBRARY -->
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+			
+			<!-- LOADING FONTS AND ICONS -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto:700%2C500%2C900%2C400&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+			
+			<link rel="stylesheet" type="text/css" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+			
+			<!-- REVOLUTION STYLE SHEETS -->
+			<link rel="stylesheet" type="text/css" href="css/rs6.css">
+			<!-- REVOLUTION LAYERS STYLES -->
+						<!-- REVOLUTION JS FILES -->
+			
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+					<script src="js/rbtools.min.js"></script>
+							<script src="js/rs6.min.js"></script>
+							
+			<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+
+			
+		</head>
+		
+		<body>
+		
+
+			<!-- START Exploration Header REVOLUTION SLIDER 6.5.16 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_253_1_wrapper" data-alias="exploration-header" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;">
+				<rs-module id="rev_slider_253_1" style="" data-version="6.5.16">
+					<rs-slides>
+						<rs-slide style="position: absolute;" data-key="rs-510" data-title="DISCOVERY OF NATURAL WONDERS" data-thumb="assets/news1-1-100x50.jpg" data-in="y:(100%);" data-out="a:false;" data-p1="What our team has found in the wild">
+							<img src="assets/dummy.png" alt="" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="assets/news1-1.jpg" data-bg="p:center bottom;" data-parallax="off" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-253-slide-510-layer-1" 
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-xy="xo:94px,114px,76px,26px;yo:213px,193px,95px,85px;"
+								data-text="w:normal;s:60,45,35,25;l:60,45,35,30;fw:700;"
+								data-dim="w:600px,560px,340px,260px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:5;font-family:'Roboto';"
+							>DISCOVERY OF NATURAL WONDERS 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-510-layer-2" 
+								class="tp-shape tp-shapewrapper"
+								data-type="shape"
+								data-xy="xo:50px,70px,50px,0;yo:220px,200px,100px,90px;"
+								data-text="w:normal;fw:700;"
+								data-dim="w:8px;h:104px,77px,59px,48px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="sY:0;o:1;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:6;background-color:rgba(255,204,0,1);"
+							> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-510-layer-3" 
+								data-type="text"
+								data-color="rgba(255,255,255,0.85)"
+								data-xy="xo:98px,118px,76px,26px;yo:358px,302px,184px,163px;"
+								data-text="w:normal;s:17;l:22;fw:500;"
+								data-dim="w:600px,560px,340px,260px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:650;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:7;font-family:'Roboto';letter-spacing:2px;"
+							>GETTING BACK INTO THE GREAT OUTDOORS FOR ADVENTURE AND MYSTERY. 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-510-layer-4" 
+								class="rev-btn"
+								data-type="button"
+								data-color="rgba(255,204,0,1)"
+								data-xy="xo:50px,70px,50px,26px;yo:465px,401px,285px,276px;"
+								data-text="s:15;l:50;fw:900,700,700,700;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-padding="r:45;l:45;"
+								data-border="bos:solid;boc:rgba(255,204,0,1);bow:2px,2px,2px,2px;"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:800;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								data-frame_hover="c:#000;bgc:#ffcc00;boc:#ffcc00;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;oX:50;oY:50;sp:0;e:power1.inOut;"
+								style="z-index:8;font-family:'Roboto';cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;letter-spacing:3px;"
+							>READ ARTICLE <i style="font-size:13px;margin-left:10px;" class="fa-chevron-right"></i> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-511" data-title="TRADITIONAL PEOPLE OF INDIA" data-thumb="assets/news2-1-100x50.jpg" data-in="y:(100%);" data-out="a:false;" data-p1="We spend a year in India for you">
+							<img src="assets/dummy.png" alt="" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="assets/news2-1.jpg" data-bg="p:center bottom;" data-parallax="off" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-253-slide-511-layer-1" 
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-xy="xo:94px,84px,76px,26px;yo:213px,193px,95px,85px;"
+								data-text="w:normal;s:60,45,35,25;l:60,45,35,30;fw:700;"
+								data-dim="w:600px,560px,340px,260px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:5;font-family:'Roboto';"
+							>TRADITIONAL PEOPLE OF INDIA 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-511-layer-2" 
+								class="tp-shape tp-shapewrapper"
+								data-type="shape"
+								data-xy="xo:50px,40px,50px,0;yo:220px,200px,100px,90px;"
+								data-text="w:normal;fw:700;"
+								data-dim="w:8px;h:104px,77px,59px,48px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="sY:0;o:1;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:6;background-color:rgba(255,204,0,1);"
+							> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-511-layer-3" 
+								data-type="text"
+								data-color="rgba(255,255,255,0.85)"
+								data-xy="xo:98px,88px,76px,26px;yo:358px,302px,184px,163px;"
+								data-text="w:normal;s:17;l:22;fw:500;"
+								data-dim="w:600px,560px,340px,260px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:650;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:7;font-family:'Roboto';letter-spacing:2px;"
+							>WHO WE MET AND WHAT WE HAVE SEEN DURING OUR YEAR INDIA. 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-511-layer-4" 
+								class="rev-btn"
+								data-type="button"
+								data-color="rgba(255,204,0,1)"
+								data-xy="xo:50px,40px,50px,26px;yo:465px,411px,285px,254px;"
+								data-text="s:15;l:50;fw:900,700,700,700;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-padding="r:45;l:45;"
+								data-border="bos:solid;boc:rgba(255,204,0,1);bow:2px,2px,2px,2px;"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:800;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								data-frame_hover="c:#000;bgc:#ffcc00;boc:#ffcc00;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;oX:50;oY:50;sp:0;e:power1.inOut;"
+								style="z-index:8;font-family:'Roboto';cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;letter-spacing:3px;"
+							>READ ARTICLE <i style="font-size:13px;margin-left:10px;" class="fa-chevron-right"></i> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-512" data-title="OUR ARCTIC CIRCLE EXPEDITION" data-thumb="assets/news3-2-100x50.jpg" data-in="y:(100%);" data-out="a:false;" data-p1="Read all the details about it here">
+							<img src="assets/dummy.png" alt="" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="assets/news3-2.jpg" data-bg="p:center bottom;" data-parallax="off" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-253-slide-512-layer-5" 
+								class="tp-shape tp-shapewrapper"
+								data-type="shape"
+								data-text="w:normal;fw:700;"
+								data-dim="w:750px,680px,440px,300px;h:100%;"
+								data-vbility="t,t,t,f"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="x:left;o:1;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:0;sp:500;"
+								data-frame_999="x:left;tp:600;e:power4.out;st:w;sp:500;"
+								style="z-index:5;background-color:rgba(33,42,64,1);"
+							> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-512-layer-1" 
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-xy="xo:94px,84px,76px,26px;yo:213px,193px,95px,85px;"
+								data-text="w:normal;s:60,45,35,25;l:60,45,35,30;fw:700;"
+								data-dim="w:600px,560px,340px,260px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:6;font-family:'Roboto';"
+							>OUR ARCTIC CIRCLE EXPEDITION 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-512-layer-2" 
+								class="tp-shape tp-shapewrapper"
+								data-type="shape"
+								data-xy="xo:50px,40px,50px,0;yo:220px,200px,100px,90px;"
+								data-text="w:normal;fw:700;"
+								data-dim="w:8px;h:104px,77px,59px,48px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="sY:0;o:1;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:7;background-color:rgba(255,204,0,1);"
+							> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-512-layer-3" 
+								data-type="text"
+								data-color="rgba(255,255,255,0.85)"
+								data-xy="xo:98px,88px,76px,26px;yo:358px,302px,184px,163px;"
+								data-text="w:normal;s:17;l:22;fw:500;"
+								data-dim="w:600px,560px,340px,260px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:650;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:8;font-family:'Roboto';letter-spacing:2px;"
+							>WHAT WE EXPERIENCED IN THE SNOW AND 50° BELOW ZERO. 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-512-layer-4" 
+								class="rev-btn"
+								data-type="button"
+								data-color="rgba(255,204,0,1)"
+								data-xy="xo:50px,40px,50px,26px;yo:465px,411px,285px,254px;"
+								data-text="s:15;l:50;fw:900,700,700,700;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-padding="r:45;l:45;"
+								data-border="bos:solid;boc:rgba(255,204,0,1);bow:2px,2px,2px,2px;"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:800;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								data-frame_hover="c:#000;bgc:#ffcc00;boc:#ffcc00;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;oX:50;oY:50;sp:0;e:power1.inOut;"
+								style="z-index:9;font-family:'Roboto';cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;letter-spacing:3px;"
+							>READ ARTICLE <i style="font-size:13px;margin-left:10px;" class="fa-chevron-right"></i> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-512-layer-7" 
+								data-type="text"
+								data-color="rgba(60,214,255,1)"
+								data-xy="xo:95px,85px,123px,69px;yo:163px,143px,52px,53px;"
+								data-text="w:normal;s:17;l:22;"
+								data-dim="w:600px,560px,290px,215px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:-50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:10;font-family:'Roboto';letter-spacing:2px;"
+							>POPULAR 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-512-layer-6" 
+								class="tp-shape tp-shapewrapper"
+								data-type="shape"
+								data-xy="xo:49px,39px,79px,28px;yo:159px,139px,49px,49px;"
+								data-text="fw:100;"
+								data-dim="w:30px;h:30px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-border="bor:50%,50%,50%,50%;"
+								data-frame_0="y:-50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								data-loop_999="sX:1.1;sY:1.1;sp:2000;e:power1.inOut;yym:t;yys:t;yyf:t;"
+								style="z-index:11;background-color:rgba(60,214,255,1);"
+							> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-512-layer-9" 
+								class="rs-svg"
+								data-type="svg"
+								data-color="rgba(33,42,64,1)"
+								data-xy="xo:52px,42px,82px,31px;yo:163px,143px,53px,53px;"
+								data-text="fw:700;"
+								data-dim="w:23px;h:23px;"
+								data-svg_src="assets/ic_trending_up_24px.svg"
+								data-svgi="c:rgba(33,42,64,1);"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:-50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								data-loop_999="sX:1.1;sY:1.1;sp:2000;e:power1.inOut;yym:t;yys:t;yyf:t;"
+								style="z-index:12;font-family:'';"
+							> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-513" data-title="WILDLIFE IN 4K YOUTUBE VIDEO" data-thumb="assets/youtubecover-1-100x50.jpg" data-in="y:(100%);" data-out="a:false;" data-p1="Created by Jacob + Katie Schwarz">
+							<img src="assets/dummy.png" alt="" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="assets/youtubecover-1.jpg" data-parallax="off" data-no-retina>
+							<rs-bgvideo 
+								data-video="vc:none;w:100%;h:100%;nse:false;l:loop;ptimer:true;"
+								data-ytid="xDMP3i36naA"
+								data-vatr="version=3&amp;enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;showinfo=0&amp;rel=0&amp;origin=http://ipa-club.uz;"
+							></rs-bgvideo>
+<!--
+							--><rs-layer
+								id="slider-253-slide-513-layer-1" 
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-xy="xo:94px,84px,76px,26px;yo:213px,193px,95px,85px;"
+								data-text="w:normal;s:60,45,35,25;l:60,45,35,30;fw:700;"
+								data-dim="w:600px,560px,340px,260px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:5;font-family:'Roboto';"
+							>WILDLIFE IN 4K YOUTUBE VIDEO 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-513-layer-2" 
+								class="tp-shape tp-shapewrapper"
+								data-type="shape"
+								data-xy="xo:50px,40px,50px,0;yo:220px,200px,100px,90px;"
+								data-text="w:normal;fw:700;"
+								data-dim="w:8px;h:104px,77px,59px,48px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="sY:0;o:1;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:500;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:6;background-color:rgba(255,204,0,1);"
+							> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-253-slide-513-layer-3" 
+								data-type="text"
+								data-color="rgba(255,255,255,0.85)"
+								data-xy="xo:98px,88px,76px,26px;yo:358px,302px,184px,163px;"
+								data-text="w:normal;s:17;l:22;fw:500;"
+								data-dim="w:600px,560px,340px,260px;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:650;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								style="z-index:7;font-family:'Roboto';letter-spacing:2px;"
+							>CREATED BY JACOB + KATIE SCHWARZ. 
+							</rs-layer><!--
+
+							--><a
+								id="slider-253-slide-513-layer-4" 
+								class="rs-layer rev-btn"
+								href="https://www.youtube.com/watch?v=xDMP3i36naA" target="_blank" rel="noopener"
+								data-type="button"
+								data-color="rgba(255,204,0,1)"
+								data-xy="xo:50px,40px,50px,26px;yo:465px,411px,285px,254px;"
+								data-text="s:15;l:50;fw:900,700,700,700;"
+								data-basealign="slide"
+								data-rsp_o="off"
+								data-rsp_bd="off"
+								data-padding="r:45;l:45;"
+								data-border="bos:solid;boc:rgba(255,204,0,1);bow:2px,2px,2px,2px;"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:power4.out;st:800;sp:1500;"
+								data-frame_999="o:0;tp:600;e:nothing;st:w;"
+								data-frame_hover="c:#000;bgc:#ffcc00;boc:#ffcc00;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;oX:50;oY:50;sp:0;e:power1.inOut;"
+								style="z-index:8;font-family:'Roboto';cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;letter-spacing:3px;"
+							>GO TO VIDEO <i style="font-size:13px;margin-left:10px;" class="fa-chevron-right"></i> 
+							</a><!--
+-->						</rs-slide>
+					</rs-slides>
+				</rs-module>
+				<script>
+					
+				</script>
+<script>
+		if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
+</script>
+				<script src="https://www.youtube.com/iframe_api"></script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+
+				<script>
+					var	tpj = jQuery;
+					if(window.RS_MODULES === undefined) window.RS_MODULES = {};
+					if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+					RS_MODULES.modules["revslider2531"] = {once: RS_MODULES.modules["revslider2531"]!==undefined ? RS_MODULES.modules["revslider2531"].once : undefined, init:function() {
+						window.revapi253 = window.revapi253===undefined || window.revapi253===null || window.revapi253.length===0  ? document.getElementById("rev_slider_253_1") : window.revapi253;
+						if(window.revapi253 === null || window.revapi253 === undefined || window.revapi253.length==0) { window.revapi253initTry = window.revapi253initTry ===undefined ? 0 : window.revapi253initTry+1; if (window.revapi253initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["revslider2531"].init()}); return;}
+						window.revapi253 = jQuery(window.revapi253);
+						if(window.revapi253.revolution==undefined){ revslider_showDoubleJqueryError("rev_slider_253_1"); return;}
+						revapi253.revolutionInit({
+								revapi:"revapi253",
+								sliderLayout:"fullscreen",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:"1240,1024,778,480",
+								gridheight:"868,768,960,720",
+								lazyType:"single",
+								perspectiveType:"local",
+								responsiveLevels:"1240,1024,778,480",
+								fullScreenOffset:"60px",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									mouseScrollNavigation:false,
+									onHoverStop:false,
+									touch: {
+										touchenabled:true
+									},
+									arrows: {
+										enable:true,
+										style:"custom",
+										hide_over:1199,
+										left: {
+											h_align:"right",
+											v_align:"bottom",
+											h_offset:60,
+											v_offset:20
+										},
+										right: {
+											v_align:"bottom",
+											v_offset:20
+										}
+									},
+									tabs: {
+										enable:true,
+										tmp:"<div class=\"tp-tab-title\">{{title}} <i style=\"float:right; margin-top:5px;\" class=\"fa-icon-chevron-right\"></i></div><div class=\"tp-tab-desc\">{{param1}}</div>",
+										style:"news-header",
+										hide_onmobile:true,
+										hide_under:1200,
+										h_align:"right",
+										h_offset:43,
+										v_offset:110,
+										direction:"vertical",
+										space:25,
+										width:350,
+										min_width:350,
+										wrapper_padding:5,
+										wrapper_color:"transparent",
+										visibleAmount:3
+									}
+								},
+								parallax: {
+									levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
+									type:"scroll",
+									origo:"slidercenter"
+								},
+								fanim: {
+									in:{"o":0},
+									out:{"a":false},
+									speed:2000
+								},
+								viewPort: {
+									global:false,
+									globalDist:"-200px",
+									enable:false,
+									visible_area:"20%"
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+						});
+						
+					}} // End of RevInitScript
+					if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
+				</script>
+
+
+
+<style>#rev_slider_253_1_wrapper .custom.tparrows{cursor:pointer;background:#000;background:rgba(0,0,0,0.5);width:40px;height:40px;position:absolute;display:block;z-index:1000}#rev_slider_253_1_wrapper .custom.tparrows.rs-touchhover{background:#000}#rev_slider_253_1_wrapper .custom.tparrows:before{font-family:'revicons';font-size:15px;color:#fff;display:block;line-height:40px;text-align:center}#rev_slider_253_1_wrapper .custom.tparrows.tp-leftarrow:before{content:'\e824'}#rev_slider_253_1_wrapper .custom.tparrows.tp-rightarrow:before{content:'\e825'}.news-header .tp-tab-title{color:#fff; font-size:17px; font-weight:900; text-transform:uppercase; font-family:"Roboto"; margin-bottom:5px; width:350px; display:block; letter-spacing:1px}.news-header .tp-tab-desc{font-size:17px; font-weight:500; color:#ffcc00; line-height:25px;font-family:"Roboto"}</style>
+		</body>
+				</html>
+		

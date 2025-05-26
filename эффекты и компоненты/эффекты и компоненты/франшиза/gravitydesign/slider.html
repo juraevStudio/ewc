@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+		<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>GravityDesign 1 - Slider Revolution</title>
+			<meta name="description" content="Slider Revolution Example" />
+			<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+			<meta name="author" content="ThemePunch" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<!-- LOAD JQUERY LIBRARY -->
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+			
+			<!-- LOADING FONTS AND ICONS -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto:400%2C300%7CPoppins:700%7COswald:300&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+			
+			<link rel="stylesheet" type="text/css" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+			
+			<!-- REVOLUTION STYLE SHEETS -->
+			<link rel="stylesheet" type="text/css" href="css/rs6.css">
+			<!-- REVOLUTION LAYERS STYLES -->
+						<!-- REVOLUTION JS FILES -->
+			
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+					<script src="js/rbtools.min.js"></script>
+							<script src="js/rs6.min.js"></script>
+							
+			<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+
+			
+		</head>
+		
+		<body>
+		
+
+			<!-- START GravityDesign 1 REVOLUTION SLIDER 6.5.16 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_217_1_wrapper" data-alias="gravitydesign-1" data-source="gallery" style="visibility:hidden;background:#1d2931;padding:0;">
+				<rs-module id="rev_slider_217_1" class="rs-respect-topbar" style="" data-version="6.5.16">
+					<rs-slides>
+						<rs-slide style="position: absolute;" data-key="rs-449" data-title="Slide" data-anim="ms:600;r:0;" data-in="o:0;" data-out="a:false;">
+							<img src="assets/transparent.png" alt="Slide" class="rev-slidebg tp-rs-img" data-bg="c:#1d2931;" data-parallax="off" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-217-slide-449-layer-1" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:b;"
+								data-text="l:22;a:inherit;"
+								data-dim="w:['100%','100%','100%','100%'];h:['100%','100%','100%','100%'];"
+								data-basealign="slide"
+								data-frame_1="st:500;sp:2000;sR:500;"
+								data-frame_999="o:0;st:w;sR:6500;"
+								style="z-index:5;"
+							><img src="assets/gravity_bg.jpg" alt="" class="tp-rs-img" width="1920" height="1280" data-c="cover-proportional" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-2" 
+								class="rs-pxl-2"
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:b;yo:299px,260px,380px,350px;"
+								data-text="l:22;a:inherit;"
+								data-dim="w:820px,718px,615px,410px;h:400px,350px,300px,200px;"
+								data-frame_0="y:100px;rZ:15deg;blu:20px;"
+								data-frame_1="e:power4.out;st:250;sp:5000;sR:250;"
+								data-frame_999="o:0;st:w;sR:3750;"
+								data-loop_0="xR:5px;yR:5px;oX:50;oY:50;"
+								data-loop_999="xR:5px;yR:5px;crd:t;sp:10000;yys:t;yyf:t;"
+								style="z-index:11;"
+							><img src="assets/gravity_astronaut.png" alt="" class="tp-rs-img" width="1025" height="500" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-3" 
+								class="rs-pxl-1"
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;y:b;yo:600px,520px,600px,500px;"
+								data-text="s:120,120,120,80;l:90,90,90,60;ls:-10px;fw:700;a:center;"
+								data-frame_0="sX:2;blu:20px;"
+								data-frame_1="st:1000;sp:2000;sR:1000;"
+								data-frame_999="o:0;st:w;sR:6000;"
+								style="z-index:9;font-family:'Poppins';"
+							>В 7 раз больше прибыли
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-5" 
+								class="rs-pxl-1"
+								data-type="text"
+								data-color="rgba(0,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:3px;y:b;yo:600px,520px,600px,500px;"
+								data-text="s:120,120,120,80;l:90,90,90,60;ls:-10px;fw:700;a:center;"
+								data-frame_0="sX:2;blu:20px;"
+								data-frame_1="st:1100;sp:2000;sR:1100;"
+								data-frame_999="o:0;st:w;sR:5900;"
+								data-loop_0="xR:2px;yR:2px;oX:50;oY:50;"
+								data-loop_999="xR:2px;yR:2px;crd:t;sp:3000;yys:t;yyf:t;"
+								style="z-index:8;font-family:'Poppins';"
+							>В 7 раз больше прибыли
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-7" 
+								class="rs-pxl-1"
+								data-type="text"
+								data-color="rgba(255,255,0,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-3px;y:b;yo:600px,520px,600px,500px;"
+								data-text="s:120,120,120,80;l:90,90,90,60;ls:-10px;fw:700;a:center;"
+								data-frame_0="sX:2;blu:20px;"
+								data-frame_1="st:1200;sp:2000;sR:1200;"
+								data-frame_999="o:0;st:w;sR:5800;"
+								data-loop_0="xR:2px;yR:2px;oX:50;oY:50;"
+								data-loop_999="xR:2px;yR:2px;crd:t;sp:3000;yys:t;yyf:t;"
+								style="z-index:7;font-family:'Poppins';"
+							>В 7 раз больше прибыли
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-8" 
+								class="rs-pxl-1"
+								data-type="text"
+								data-color="rgba(255,0,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;y:b;yo:597px,517px,597px,497px;"
+								data-text="s:120,120,120,80;l:90,90,90,60;ls:-10px;fw:700;a:center;"
+								data-frame_0="sX:2;blu:20px;"
+								data-frame_1="st:1300;sp:2000;sR:1300;"
+								data-frame_999="o:0;st:w;sR:5700;"
+								data-loop_0="xR:2px;yR:2px;oX:50;oY:50;"
+								data-loop_999="xR:2px;yR:2px;crd:t;sp:3000;yys:t;yyf:t;"
+								style="z-index:6;font-family:'Poppins';"
+							>В 7 раз больше прибыли
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-9" 
+								class="rs-pxl-3"
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-531px,-531px,-348px,-204px;y:b;yo:350px,350px,421px,431px;"
+								data-text="l:22;a:inherit;"
+								data-dim="w:['29px','29px','29px','29px'];h:['21px','21px','21px','21px'];"
+								data-frame_0="y:150px;rZ:90deg;blu:10px;"
+								data-frame_1="e:power4.out;st:250;sp:3000;sR:250;"
+								data-frame_999="o:0;st:w;sR:5750;"
+								data-loop_0="xR:3px;yR:3px;oX:50;oY:50;"
+								data-loop_999="xR:3px;yR:3px;crd:t;sp:5000;yys:t;yyf:t;"
+								style="z-index:14;"
+							><img src="assets/flake2.png" alt="" class="tp-rs-img" width="29" height="21" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-10" 
+								class="rs-pxl-3"
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:493px,493px,326px,194px;y:b;yo:399px,399px,408px,438px;"
+								data-text="l:22;a:inherit;"
+								data-dim="w:['28px','28px','28px','28px'];h:['27px','27px','27px','27px'];"
+								data-frame_0="y:150px;rZ:-90deg;blu:10px;"
+								data-frame_1="e:power4.out;st:350;sp:3000;sR:350;"
+								data-frame_999="o:0;st:w;sR:5650;"
+								data-loop_0="xR:3px;yR:3px;oX:50;oY:50;"
+								data-loop_999="xR:3px;yR:3px;crd:t;sp:5000;yys:t;yyf:t;"
+								style="z-index:15;"
+							><img src="assets/flake5.png" alt="" class="tp-rs-img" width="28" height="27" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-11" 
+								class="rs-pxl-5"
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:350px,350px,245px,141px;y:b;yo:338px,338px,331px,348px;"
+								data-text="l:22;a:inherit;"
+								data-dim="w:['26px','26px','26px','26px'];h:['24px','24px','24px','24px'];"
+								data-frame_0="y:150px;rZ:45deg;blu:10px;"
+								data-frame_1="e:power4.out;st:450;sp:3000;sR:450;"
+								data-frame_999="o:0;st:w;sR:5550;"
+								data-loop_0="xR:2px;yR:2px;oX:50;oY:50;"
+								data-loop_999="xR:2px;yR:2px;crd:t;sp:3000;yys:t;yyf:t;"
+								style="z-index:16;"
+							><img src="assets/flake4.png" alt="" class="tp-rs-img" width="26" height="24" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-12" 
+								class="rs-pxl-5"
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-455px,-455px,-321px,-214px;y:b;yo:320px,320px,357px,381px;"
+								data-text="l:22;a:inherit;"
+								data-dim="w:['27px','27px','27px','27px'];h:['26px','26px','26px','26px'];"
+								data-frame_0="y:150px;rZ:-125deg;blu:10px;"
+								data-frame_1="e:power4.out;st:550;sp:3000;sR:550;"
+								data-frame_999="o:0;st:w;sR:5450;"
+								data-loop_0="xR:4px;yR:4px;oX:50;oY:50;"
+								data-loop_999="xR:4px;yR:4px;crd:t;sp:5000;yys:t;yyf:t;"
+								style="z-index:17;"
+							><img src="assets/flake3.png" alt="" class="tp-rs-img" width="27" height="26" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-13" 
+								class="rs-pxl-4"
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-88px,-88px,-88px,-37px;y:b;yo:382px,382px,382px,399px;"
+								data-text="l:22;a:inherit;"
+								data-dim="w:13,13,13,13px;h:['12px','12px','12px','12px'];"
+								data-frame_0="y:150px;rZ:125deg;blu:10px;"
+								data-frame_1="e:power4.out;st:650;sp:3000;sR:650;"
+								data-frame_999="o:0;st:w;sR:5350;"
+								data-loop_0="xR:3px;yR:3px;oX:50;oY:50;"
+								data-loop_999="xR:3px;yR:3px;crd:t;sp:6000;yys:t;yyf:t;"
+								style="z-index:18;"
+							><img src="assets/flake1.png" alt="" class="tp-rs-img" width="25" height="24" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-14" 
+								class="rs-pxl-4"
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-232px,-232px,-232px,-170px;y:b;yo:300px,300px,300px,366px;"
+								data-text="l:22;a:inherit;"
+								data-dim="w:['16px','16px','16px','16px'];h:['15px','15px','15px','15px'];"
+								data-frame_0="y:150px;rZ:-125deg;blu:10px;"
+								data-frame_1="e:power4.out;st:750;sp:3000;sR:750;"
+								data-frame_999="o:0;st:w;sR:5250;"
+								data-loop_0="xR:6px;yR:6px;oX:50;oY:50;"
+								data-loop_999="xR:6px;yR:6px;crd:t;sp:7000;yys:t;yyf:t;"
+								style="z-index:19;"
+							><img src="assets/flake3.png" alt="" class="tp-rs-img" width="27" height="26" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-15" 
+								class="rs-pxl-1"
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:b;yo:119px,99px,200px,220px;"
+								data-text="l:22;a:inherit;"
+								data-dim="w:509px,509px,509px,407px;h:250px,250px,250px,200px;"
+								data-frame_0="sX:1.1;sY:1.1;blu:20px;"
+								data-frame_1="st:850;sp:2000;sR:850;"
+								data-frame_999="o:0;st:w;sR:6150;"
+								data-loop_0="xR:3px;yR:3px;oX:50;oY:50;"
+								data-loop_999="xR:3px;yR:3px;crd:t;sp:5000;yys:t;yyf:t;"
+								style="z-index:10;"
+							><img src="assets/galaxy_bg-1.png" alt="" class="tp-rs-img" width="407" height="200" data-no-retina> 
+							</rs-layer><!--
+
+							--><a
+								id="slider-217-slide-449-layer-16" 
+								class="rs-layer"
+								href="https://www.sliderrevolution.com/pricing/" target="_self"
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;y:b;yo:230px,210px,310px,310px;"
+								data-text="w:nowrap,nowrap,nowrap,normal;s:25,25,25,20;l:25,25,25,20;ls:10px;fw:300;a:inherit,inherit,inherit,center;"
+								data-dim="w:auto,auto,auto,320px;"
+								data-actions='o:mouseenter;a:startlayer;layer:slider-217-slide-449-layer-17;||o:mouseleave;a:stoplayer;layer:slider-217-slide-449-layer-17;'
+								data-frame_0="sX:2;blu:10px;"
+								data-frame_1="st:1000;sp:1500;sR:1000;"
+								data-frame_999="o:0;st:w;sR:6500;"
+								data-frame_hover="oX:50;oY:50;sp:0;e:none;blu:0px;"
+								style="z-index:12;font-family:'Oswald';cursor:pointer;"
+							>START THE EXPERIENCE 
+							</a><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-17" 
+								class="tp-shape tp-shapewrapper"
+								data-type="shape"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-4px;y:b;yo:221px,201px,301px,300px;"
+								data-text="fw:300;a:inherit;"
+								data-dim="w:390px,390px,390px,180px;h:2px;"
+								data-frame_0="sX:0;o:1;"
+								data-frame_1="sp:500;sR:10;st:a;"
+								data-frame_999="sX:0;o:1;st:a;sR:8490;"
+								style="z-index:13;background-color:rgba(255,255,255,1);"
+							> 
+							</rs-layer><!--
+
+							--><a
+								id="slider-217-slide-449-layer-18" 
+								class="rs-layer"
+								href="https://www.sliderrevolution.com/" target="_self"
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-270px,-270px,-230px,0;y:b;yo:100px,100px,200px,210px;"
+								data-text="s:30,30,25,25;l:28,28,23,23;fw:300;a:center;"
+								data-dim="w:270px;"
+								data-frame_0="sX:2;blu:10px;"
+								data-frame_1="st:1400;sp:1500;sR:1400;"
+								data-frame_999="o:0;st:w;sR:6100;"
+								data-frame_hover="oX:50;oY:50;sp:0;e:none;blu:0px;"
+								style="z-index:20;font-family:'Oswald';cursor:pointer;"
+							>100% MADE WITH<br/>SLIDER REVOLUTION 
+							</a><!--
+
+							--><a
+								id="slider-217-slide-449-layer-19" 
+								class="rs-layer"
+								href="https://www.sliderrevolution.com/pricing/" target="_self"
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;y:b;yo:100px,100px,200px,150px;"
+								data-text="s:30,30,25,25;l:28,28,23,23;fw:300;a:center;"
+								data-dim="w:270px;"
+								data-frame_0="sX:2;blu:10px;"
+								data-frame_1="st:1400;sp:1500;sR:1400;"
+								data-frame_999="o:0;st:w;sR:6100;"
+								data-frame_hover="oX:50;oY:50;sp:0;e:none;blu:0px;"
+								style="z-index:21;font-family:'Oswald';cursor:pointer;"
+							>DOWNLOAD THIS<br/>TEMPLATE NOW 
+							</a><!--
+
+							--><a
+								id="slider-217-slide-449-layer-20" 
+								class="rs-layer"
+								href="https://www.sliderrevolution.com/examples/" target="_self"
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:270px,270px,230px,0;y:b;yo:100px,100px,200px,90px;"
+								data-text="s:30,30,25,25;l:28,28,23,23;fw:300;a:center;"
+								data-dim="w:270px;"
+								data-frame_0="sX:2;blu:10px;"
+								data-frame_1="st:1400;sp:1500;sR:1400;"
+								data-frame_999="o:0;st:w;sR:6100;"
+								data-frame_hover="oX:50;oY:50;sp:0;e:none;blu:0px;"
+								style="z-index:22;font-family:'Oswald';cursor:pointer;"
+							>200+ TEMPLATES<br/>AVAILABLE IN LIBRARY 
+							</a><!--
+
+							--><rs-layer
+								id="slider-217-slide-449-layer-21" 
+								data-type="text"
+								data-color="rgba(12,17,21,1)"
+								data-rsp_ch="on"
+								data-xy="x:c;y:b;yo:50px,50px,50px,30px;"
+								data-text="w:nowrap,nowrap,nowrap,normal;s:15;l:15;ls:10px;fw:300;a:center;"
+								data-dim="w:auto,auto,auto,360px;"
+								data-basealign="slide"
+								data-frame_0="sX:2;blu:10px;"
+								data-frame_1="st:1400;sp:1500;sR:1400;"
+								data-frame_999="o:0;st:w;sR:6100;"
+								style="z-index:23;font-family:'Oswald';cursor:pointer;"
+							>COPYRIGHT 2020 THEMEPUNCH OHG 
+							</rs-layer><!--
+-->						</rs-slide>
+					</rs-slides>
+				</rs-module>
+				<script>
+					
+				</script>
+<script>
+		if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
+</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+
+				<script>
+					var	tpj = jQuery;
+					if(window.RS_MODULES === undefined) window.RS_MODULES = {};
+					if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+					RS_MODULES.modules["revslider2171"] = {once: RS_MODULES.modules["revslider2171"]!==undefined ? RS_MODULES.modules["revslider2171"].once : undefined, init:function() {
+						window.revapi217 = window.revapi217===undefined || window.revapi217===null || window.revapi217.length===0  ? document.getElementById("rev_slider_217_1") : window.revapi217;
+						if(window.revapi217 === null || window.revapi217 === undefined || window.revapi217.length==0) { window.revapi217initTry = window.revapi217initTry ===undefined ? 0 : window.revapi217initTry+1; if (window.revapi217initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["revslider2171"].init()}); return;}
+						window.revapi217 = jQuery(window.revapi217);
+						if(window.revapi217.revolution==undefined){ revslider_showDoubleJqueryError("rev_slider_217_1"); return;}
+						revapi217.revolutionInit({
+								revapi:"revapi217",
+								sliderType:"hero",
+								sliderLayout:"fullscreen",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:"1240,1024,778,480",
+								gridheight:"868,768,960,720",
+								perspective:600,
+								perspectiveType:"local",
+								editorheight:"868,768,960,720",
+								responsiveLevels:"1240,1024,778,480",
+								fullScreenOffsetContainer:"#masthead",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									onHoverStop:false
+								},
+								parallax: {
+									levels:[1,2,3,4,5,10,15,20,25,46,47,48,49,50,51,55],
+									type:"mouse",
+									origo:"slidercenter"
+								},
+								viewPort: {
+									global:false,
+									globalDist:"-200px",
+									enable:false,
+									visible_area:"20%"
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+						});
+						
+					}} // End of RevInitScript
+					if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
+				</script>
+
+
+
+		</body>
+				</html>
+		

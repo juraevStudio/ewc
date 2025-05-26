@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+		<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Energy Drinks Product - Slider Revolution</title>
+			<meta name="description" content="Slider Revolution Example" />
+			<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+			<meta name="author" content="ThemePunch" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<!-- LOAD JQUERY LIBRARY -->
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+			
+			<!-- LOADING FONTS AND ICONS -->
+			<link href="https://fonts.googleapis.com/css?family=Poppins:600%7CBungee+Outline:400%7CRoboto:400%7CStaatliches:400&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+			
+			<link rel="stylesheet" type="text/css" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+			
+			<!-- REVOLUTION STYLE SHEETS -->
+			<link rel="stylesheet" type="text/css" href="css/rs6.css">
+			<!-- REVOLUTION LAYERS STYLES -->
+						<!-- REVOLUTION JS FILES -->
+			
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+					<script src="js/rbtools.min.js"></script>
+							<script src="js/rs6.min.js"></script>
+							
+			<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+
+			
+		</head>
+		
+		<body>
+		
+
+			<!-- START Energy Drinks Product REVOLUTION SLIDER 6.5.16 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="products_wrapper" data-alias="energy-drinks-product" data-source="gallery" style="visibility:hidden;background:#ffd692;padding:0;">
+				<rs-module id="products" style="" data-version="6.5.16">
+					<rs-slides>
+						<rs-slide style="position: absolute;" data-key="rs-645" data-title="Slide" data-anim="ms:1000;r:0;" data-in="o:0;" data-out="a:false;">
+							<img src="assets/transparent.png" alt="Slide" class="rev-slidebg tp-rs-img" data-bg="c:#ffd692;" data-no-retina>
+<!--						--><rs-zone id="rrzm_645" class="rev_row_zone_middle" style="z-index: 16;"><!--
+
+								--><rs-row
+									id="slider-311-slide-645-layer-15" 
+									data-type="row"
+									data-xy="xo:50px;yo:210px;"
+									data-rsp_o="off"
+									data-rsp_bd="off"
+									data-margin="b:0,0,250,200;"
+									data-padding="r:50,30,30,30;l:50,30,30,30;"
+									data-frame_0="o:1;"
+									data-frame_999="o:0;st:w;sR:8700;sA:9000;"
+									style="z-index:1;"
+								><!--
+									--><rs-column
+										id="slider-311-slide-645-layer-16" 
+										data-type="column"
+										data-xy="xo:50px;yo:210px;"
+										data-text="a:left,left,center,center;"
+										data-rsp_o="off"
+										data-rsp_bd="off"
+										data-column="w:50%;"
+										data-frame_0="o:1;"
+										data-frame_999="o:0;st:w;sR:8700;sA:9000;"
+										style="z-index:2;width:100%;"
+									><!--
+										--><rs-layer
+											id="slider-311-slide-645-layer-13" 
+											data-type="text"
+											data-color="#6e2142"
+											data-xy="x:c;y:m;"
+											data-text="w:normal;s:80,70,50,30;l:65,60,40,25;a:left,left,center,center;"
+											data-dim="w:100%;"
+											data-rsp_o="off"
+											data-rsp_bd="off"
+											data-margin="b:5;"
+											data-frame_999="o:0;st:w;sR:8700;"
+											style="z-index:3;font-family:'Bungee Outline';"
+										>organic 
+										</rs-layer><!--
+
+										--><rs-layer
+											id="slider-311-slide-645-layer-25" 
+											data-type="text"
+											data-color="#6e2142"
+											data-xy="x:c;y:m;"
+											data-text="w:normal;s:80,70,50,30;l:65,60,40,25;a:left,left,center,center;"
+											data-dim="w:100%;"
+											data-rsp_o="off"
+											data-rsp_bd="off"
+											data-frame_999="o:0;st:w;sR:8700;"
+											style="z-index:4;font-family:'Staatliches';"
+										>ENERGY DRINK<br />
+RASPBERRY 
+										</rs-layer><!--
+
+										--><rs-layer
+											id="slider-311-slide-645-layer-2" 
+											data-type="text"
+											data-color="#6e2142"
+											data-text="w:normal;s:20,17,17,13;l:30,25,25,18;ls:1px;fw:600;a:left,left,center,center;"
+											data-dim="w:100%,100%,100%,auto;"
+											data-rsp_o="off"
+											data-rsp_bd="off"
+											data-disp="inline-block"
+											data-margin="t:50,40,20,20;"
+											data-frame_999="o:0;st:w;sR:8700;"
+											style="z-index:5;font-family:'Poppins';text-transform:uppercase;display:inline-block;"
+										>WITH HERBAL EXTRACTS AND NATURAL CAFFEINE. A GREAT ADDITION TO YOUR MORNING ROUTINE, WORKOUT or LUNCH BREAK. 
+										</rs-layer><!--
+
+										--><rs-layer
+											id="slider-311-slide-645-layer-22" 
+											data-type="text"
+											data-color="#6e2142"
+											data-xy="x:c;y:m;"
+											data-text="w:normal;s:35,30,30,20;l:80,70,60,40;a:center;"
+											data-dim="w:350px,300px,250px,200px;"
+											data-actions='id:order;o:click;a:scrollto;sp:1000ms;e:power1.inOut;'
+											data-rsp_o="off"
+											data-rsp_bd="off"
+											data-disp="inline-block"
+											data-margin="t:80,60,40,30;"
+											data-border="bos:solid;boc:#6e2142;bow:2px,2px,2px,2px;bor:10px,10px,10px,10px;"
+											data-frame_999="o:0;st:w;sR:8700;"
+											data-frame_hover="c:#ffd692;bgc:#6e2142;boc:#6e2142;bor:10px,10px,10px,10px;bos:solid;bow:2px,2px,2px,2px;"
+											style="z-index:6;background-color:#ffd692;font-family:'Staatliches';cursor:pointer;display:inline-block;"
+										>TRY ME NOW 
+										</rs-layer><!--
+									--></rs-column><!--
+
+									--><rs-column
+										id="slider-311-slide-645-layer-17" 
+										data-type="column"
+										data-xy="xo:50px;yo:210px;"
+										data-rsp_o="off"
+										data-rsp_bd="off"
+										data-column="w:50%;"
+										data-frame_0="o:1;"
+										data-frame_999="o:0;st:w;sR:8700;sA:9000;"
+										style="z-index:7;width:100%;"
+									><!--									--></rs-column><!--
+								--></rs-row><!--
+							--></rs-zone><!--
+
+							--><rs-layer
+								id="slider-311-slide-645-layer-19" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:r,r,c,c;xo:130px,107px,-70px,-43px;y:m;yo:0,0,240px,148px;"
+								data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
+								data-dim="w:300px,247px,187px,115px;h:559px,461px,350px,215px;"
+								data-sba="t:true;"
+								data-frame_0="x:right;y:bottom;o:1;rZ:15deg;"
+								data-frame_1="rZ:-5deg;e:back.out;st:1800;sp:2500;sR:1800;"
+								data-frame_999="o:0;st:w;sR:4700;"
+								style="z-index:13;"
+							><img src="assets/sodacan1.png" alt="" class="tp-rs-img" width="500" height="931" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-311-slide-645-layer-21" 
+								class="tp-shape tp-shapewrapper tp-bubblemorph"
+								data-type="shape"
+								data-rsp_ch="on"
+								data-xy="x:r,r,c,c;xo:-250px,-250px,0,0;y:b;yo:-150px,-100px,-400px,-250px;"
+								data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
+								data-dim="w:1000px,750px,750px,500px;h:1000px,750px,750px,500px;"
+								data-basealign="slide"
+								data-frame_0="x:right;y:bottom;o:1;"
+								data-frame_1="sp:2000;"
+								data-frame_999="o:0;st:w;sR:7000;"
+								style="z-index:12;background-color:#6e2142;"
+							> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-311-slide-645-layer-23" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:r,r,c,c;xo:-99px,-81px,70px,43px;y:m;yo:94px,77px,278px,171px;"
+								data-text="w:normal;s:20,16,12,7;l:0,20,15,9;"
+								data-dim="w:300px,247px,187px,115px;h:559px,461px,350px,215px;"
+								data-sba="t:true;"
+								data-frame_0="x:right;y:bottom;o:1;rZ:-15deg;"
+								data-frame_1="rZ:5deg;e:back.out;st:2000;sp:2500;sR:2000;"
+								data-frame_999="o:0;st:w;sR:4500;"
+								style="z-index:14;"
+							><img src="assets/sodacan1.png" alt="" class="tp-rs-img" width="500" height="931" data-no-retina> 
+							</rs-layer><!--
+-->						</rs-slide>
+					</rs-slides>
+				</rs-module>
+				<script>
+					
+				</script>
+<script>
+		if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
+</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+
+				<script>
+					var	tpj = jQuery;
+					if(window.RS_MODULES === undefined) window.RS_MODULES = {};
+					if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+					RS_MODULES.modules["products"] = {once: RS_MODULES.modules["products"]!==undefined ? RS_MODULES.modules["products"].once : undefined, init:function() {
+						window.revapi311 = window.revapi311===undefined || window.revapi311===null || window.revapi311.length===0  ? document.getElementById("products") : window.revapi311;
+						if(window.revapi311 === null || window.revapi311 === undefined || window.revapi311.length==0) { window.revapi311initTry = window.revapi311initTry ===undefined ? 0 : window.revapi311initTry+1; if (window.revapi311initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["products"].init()}); return;}
+						window.revapi311 = jQuery(window.revapi311);
+						if(window.revapi311.revolution==undefined){ revslider_showDoubleJqueryError("products"); return;}
+						revapi311.revolutionInit({
+								revapi:"revapi311",
+								sliderType:"hero",
+								sliderLayout:"fullscreen",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:"1240,1024,778,480",
+								gridheight:"900,768,960,720",
+								perspectiveType:"local",
+								editorheight:"900,768,960,720",
+								responsiveLevels:"1240,1024,778,480",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									onHoverStop:false
+								},
+								sbtimeline: {
+									set:true,
+									ease:"power2.out",
+									speed:"2000ms"
+								},
+								viewPort: {
+									global:false,
+									globalDist:"-200px",
+									enable:true,
+									visible_area:"-200px"
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+						});
+						
+					}} // End of RevInitScript
+					if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
+				</script>
+
+
+
+		</body>
+				</html>
+		
